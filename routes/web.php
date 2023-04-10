@@ -22,3 +22,11 @@ Auth::routes([
 ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::group(array('namespace'=>'Backend'),funtion(){
+//    Route::get('/ringtones','RingtoneController@create');
+//});
+
+Route::group(array('namespace'=>'backend'),funtion(){
+    Route::get('ringtones','RingtoneController@create')
+});
