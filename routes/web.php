@@ -27,6 +27,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //    Route::get('/ringtones','RingtoneController@create');
 //});
 
-Route::group(array('namespace'=>'backend'),funtion(){
-    Route::get('ringtones','RingtoneController@create')
+Route::group(array('namespace'=>'Backend'),function(){
+    Route::resource('/ringtones','RingtoneController');
 });
